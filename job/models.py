@@ -12,9 +12,14 @@ class Ville(models.Model):
 class Service(models.Model):
     pass
 
-# class form beetwen client and societe mean contra (description du tache)
+# class Worker
 class Worker(models.Model):
     pass
+
+#class Work mean contra beetwen client and Worker
+class Work(models.Model):
+    pass
+
 
 
 

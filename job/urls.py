@@ -6,4 +6,5 @@ app_name = "job"
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^$', views.one_service, name='one_service'),
 ]
