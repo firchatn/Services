@@ -2695,7 +2695,7 @@
 				padding: 1em;
 				border-radius: 4px;
 				border-bottom: 0;
-				color: #ffffff;
+				color: #b7b0b0;
 				text-align: center;
 				text-decoration: none;
 				z-index: 3;
@@ -2729,9 +2729,7 @@
 						margin-bottom: 0;
 					}
 
-			.tiles article.style1 > .image:before {
-				background-color: #f2849e;
-			}
+
 
 			.tiles article.style2 > .image:before {
 				background-color: #7ecaf6;
