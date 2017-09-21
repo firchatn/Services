@@ -10,7 +10,9 @@ class Ville(models.Model):
 
 # Service means catecory of servivces : exemples electicite, plamberie ..
 class Service(models.Model):
-    pass
+    name = models.CharField(max_length=20)
+    icon = models.ImageField(upload_to='upload/')
+    about = models.TextField()
 
 # class Worker
 class Worker(models.Model):
