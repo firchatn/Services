@@ -1,11 +1,12 @@
 from django.shortcuts import render
-
+from .models import Service
 
 
 
 # Create your views here.
 def index(request):
-    return render(request,'job/index.html')
+    service = Service.objects.all()
+    return render(request,'job/index.html', {'service' : service})
 
 
 # View service onClick on img service new page render with filter service
