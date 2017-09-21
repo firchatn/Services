@@ -29,6 +29,7 @@ class Worker(models.Model):
     email = models.EmailField()
     work = models.ForeignKey(Service, on_delete=models.CASCADE)
     city = models.ForeignKey(Ville, on_delete=models.CASCADE)
+    img = models.ImageField(upload_to='upload/')
 
     def __str__(self):
         return str(self.cin)

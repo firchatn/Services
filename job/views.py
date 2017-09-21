@@ -11,6 +11,7 @@ def index(request):
 
 # View service onClick on img service new page render with filter service
 # 2 optinel param city of woker on status (libre,oucuper)
-def one_service(request, service, city=None, status=None):
-    oneService = Worker.objects.filter(work=service)
-    return render(request,'job/finder.html',{'oneservice' : oneService})
+def one_service(request, city=None, status=None):
+    service = request.GET.get('service')
+    workers = Worker.objects.filter(work=service)
+    return render(request,'job/finder.html',{'workers' : workers})
