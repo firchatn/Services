@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Service
+from .models import Service, Worker
 
 
 
@@ -12,4 +12,5 @@ def index(request):
 # View service onClick on img service new page render with filter service
 # 2 optinel param city of woker on status (libre,oucuper)
 def one_service(request, service, city=None, status=None):
-    pass
+    oneService = Worker.objects.filter(work=service)
+    return render(request,'job/finder.html',{'oneservice' : oneService})
