@@ -13,5 +13,6 @@ def index(request):
 # 2 optinel param city of woker on status (libre,oucuper)
 def one_service(request, city=None, status=None):
     service = request.GET.get('service')
-    workers = Worker.objects.filter(work=service)
-    return render(request,'job/finder.html',{'workers' : workers})
+
+    workers = Worker.objects.all()
+    return render(request,'job/finder.html',{'workers' : workers, 'service' : service})
