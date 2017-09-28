@@ -15,3 +15,6 @@ def one_service(request, city=None, status=None):
     service = request.GET.get('service')
     workers = Worker.objects.all()
     return render(request,'job/finder.html',{'workers' : workers, 'service' : service})
+
+def profile(request):
+    pass
