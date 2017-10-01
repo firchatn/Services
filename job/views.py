@@ -17,4 +17,4 @@ def one_service(request, city=None, status=None):
     return render(request,'job/finder.html',{'workers' : workers, 'service' : service})
 
 def profile(request):
-    pass
+    return render(request, 'job/profile.html')
