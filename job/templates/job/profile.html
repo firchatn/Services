@@ -322,15 +322,15 @@
 
                 </div>
                 <div class="avatar">
-                    <img alt="" src="http://lorempixel.com/100/100/people/9/">
+                    <img alt="" src="{{ worker.img.url }}">
                 </div>
                 <div class="info">
                     <div class="title">
-                        <a target="_blank" href="http://scripteden.com/">{{ worker.name}}</a>
+                        <a target="_blank" href="http://scripteden.com/">{{ worker.name}} {{ worker.lastname}}</a>
                     </div>
-                    <div class="desc">Passionate designer</div>
-                    <div class="desc">Curious developer</div>
-                    <div class="desc">Tech geek</div>
+                    <div class="desc">Phone {{ worker.phone}}</div>
+                    <div class="desc">Email {{ worker.email}}</div>
+                    <div class="desc">City {{ worker.city}}</div>
                 </div>
 
             </div>
