@@ -17,4 +17,6 @@ def one_service(request, city=None, status=None):
     return render(request,'job/finder.html',{'workers' : workers, 'service' : service})
 
 def profile(request):
-    return render(request, 'job/profile.html')
+    idprofil = request.GET.get('profil')
+    worker = Worker.objects.get(id=idprofil)
+    return render(request, 'job/profile.html', {'worker' : worker})
