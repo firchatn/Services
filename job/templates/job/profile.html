@@ -1,105 +1,97 @@
-
-
-
-
 <!DOCTYPE HTML>
 
 <html>
-	<head>
-		<title>Services</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <title>Services</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-		{% load staticfiles %}
-		<link rel="stylesheet" type="text/css" href="{% static 'job/assets/css/main.css' %}" />
-		<link rel="stylesheet" type="text/css" href="{% static 'job/assets/css/profile.css' %}" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'job/assets/css/main.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'job/assets/css/profile.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	</head>
+</head>
 
-	<body>
-		<!-- Wrapper -->
-			<div id="wrapper">
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
 
-							<!-- Logo -->
-								<a href="{% url 'job:index' %}" class="logo">
-									<span class="symbol"><img src="{% static 'job/images/logo.svg' %}" alt="" /></span><span class="title">Services</span>
-								</a>
+            <!-- Logo -->
+            <a href="{% url 'job:index' %}" class="logo">
+                <span class="symbol"><img src="{% static 'job/images/logo.svg' %}" alt=""/></span><span class="title">Services</span>
+            </a>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+            <!-- Nav -->
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
 
-						</div>
-					</header>
+        </div>
+    </header>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="{% url 'job:index' %}">Home</a></li>
-							<li><a href="generic.html">Services</a></li>
-							<li><a href="generic.html">Clients</a></li>
-							<li><a href="generic.html">Sociéte</a></li>
-							<li><a href="elements.html">Pack Complet</a></li>
-							<li><a href="#" class="button special">Login/
-								Sign Up</a></li>
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="{% url 'job:index' %}">Home</a></li>
+            <li><a href="generic.html">Services</a></li>
+            <li><a href="generic.html">Clients</a></li>
+            <li><a href="generic.html">Sociéte</a></li>
+            <li><a href="elements.html">Pack Complet</a></li>
+            <li><a href="#" class="button special">Login/
+                Sign Up</a></li>
 
-						</ul>
-					</nav>
+        </ul>
+    </nav>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<h1>Campus Services<br />
-								Solution pour facilité votre vie.</h1>
-								<p>Vous chercher un bonne ouvirier , vous avez un problem ou un panne urgent, ici la solution vite choisir votre service et on 30 min notre agent va etre devent votre porte. </p>
-							</header>
-
-
-
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container">
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <header>
+                <h1>Campus Services<br/>
+                    Solution pour facilité votre vie.</h1>
+                <p>Vous chercher un bonne ouvirier , vous avez un problem ou un panne urgent, ici la solution vite
+                    choisir votre service et on 30 min notre agent va etre devent votre porte. </p>
+            </header>
 
 
+            <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+            <div class="container">
 
 
+                <h2 style="text-align:center">Worker {{worker.id}}</h2>
 
-<h2 style="text-align:center">Worker {{worker.id}}</h2>
+                <div class="card">
+                    <img src="{{ worker.img.url }}" alt="John" style="width:50%">
+                    <h1> {{worker.name}} {{worker.lastname}}</h1>
+                    <p class="title">{{worker.email}}</p>
+                    <p>{{worker.phone}}</p>
+                    <p>{{worker.city}}</p>
 
-<div class="card">
-  <img src="{{ worker.img.url }}" alt="John" style="width:50%">
-  <h1> {{worker.name}}  {{worker.lastname}}</h1>
-  <p class="title">{{worker.email}}</p>
-  <p>{{worker.phone}}</p>
-	<p>{{worker.city}}</p>
-
- <p><button>Contact</button></p>
-</div>
-
-
-
-
-</div>
+                    <p>
+                        <button>Contact</button>
+                    </p>
+                </div>
 
 
-			</div>
+            </div>
 
-		<!-- Scripts -->
 
-			<script src="{% static 'job/assets/js/jquery.min.js' %}"></script>
-			<script src="{% static 'job/assets/js/skel.min.js' %}"></script>
-			<script src="{% static 'job/assets/js/util.js' %}"></script>
-			<script src="{% static 'job/assets/js/main.js' %}"></script>
+        </div>
 
-	</body>
+        <!-- Scripts -->
+
+        <script src="{% static 'job/assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'job/assets/js/skel.min.js' %}"></script>
+        <script src="{% static 'job/assets/js/util.js' %}"></script>
+        <script src="{% static 'job/assets/js/main.js' %}"></script>
+
+</body>
 </html>
